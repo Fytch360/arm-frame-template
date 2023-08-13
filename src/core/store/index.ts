@@ -1,10 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import toastMessagesReducer from './slices/toast-messages';
+import { configureStore } from "@reduxjs/toolkit";
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+
+import toastMessagesReducer from "./slices/toast-messages";
 
 export const store = configureStore({
-  reducer: {toastMessagesReducer},
-  devTools: process.env.NODE_ENV === 'development',
+  reducer: { toastMessagesReducer },
+  devTools: process.env.NODE_ENV === "development",
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([]),
 });
 

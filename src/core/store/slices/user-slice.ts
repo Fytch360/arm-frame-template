@@ -1,15 +1,14 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface IUser {
-    name: string;
-    email: string;
-  }
-  
-  export interface IGenericResponse {
-    status: string;
-    message: string;
-  }
-  
+  name: string;
+  email: string;
+}
+
+export interface IGenericResponse {
+  status: string;
+  message: string;
+}
 
 interface IUserState {
   user: IUser | null;
@@ -21,7 +20,7 @@ const initialState: IUserState = {
 
 export const userSlice = createSlice({
   initialState,
-  name: 'userSlice',
+  name: "userSlice",
   reducers: {
     logout: () => initialState,
     setUser: (state, action: PayloadAction<IUser>) => {

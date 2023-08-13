@@ -1,8 +1,10 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
+
+import { Footer } from "../footer";
+
 import { GlobalStyle } from "./global-styles";
 import { Header } from "./header";
-import { Footer } from "../footer";
 
 const HEADER_HEIGHT = "64px";
 

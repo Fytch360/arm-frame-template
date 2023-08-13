@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { NavLink } from "react-router-dom";
-import { Logo } from "../../modules/icons"
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import styled from "styled-components";
+
+import { Logo } from "../../modules/icons";
 
 export function Header() {
   return (
@@ -22,38 +23,27 @@ export function Header() {
         </StyledLink>
       </NavbarContent>
       <DropdownsSection>
-     <DropdownMenu.Root>
-    <DropdownMenu.Trigger>
-     RU
-    </DropdownMenu.Trigger>
-    <DropdownMenu.Portal>
-        <DropdownMenu.Content sideOffset={5}>
-          <DropdownMenu.Item>
-            RU
-          </DropdownMenu.Item>
-          <DropdownMenu.Item>
-            EN
-          </DropdownMenu.Item>
-      </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-
-     </DropdownMenu.Root>
-     <DropdownMenu.Root>
-    <DropdownMenu.Trigger>
-     <span>Тимур И.</span>
-    </DropdownMenu.Trigger>
-    <DropdownMenu.Portal>
-        <DropdownMenu.Content sideOffset={5}>
-          <DropdownMenu.Item>
-           Настройки
-          </DropdownMenu.Item>
-          <DropdownMenu.Item>
-            Выход
-          </DropdownMenu.Item>
-      </DropdownMenu.Content>
-      </DropdownMenu.Portal>
-     </DropdownMenu.Root>
-     </DropdownsSection>
+        <DropdownMenu.Root>
+          <DropdownMenu.Trigger>RU</DropdownMenu.Trigger>
+          <DropdownMenu.Portal>
+            <DropdownMenu.Content sideOffset={5}>
+              <DropdownMenu.Item>RU</DropdownMenu.Item>
+              <DropdownMenu.Item>EN</DropdownMenu.Item>
+            </DropdownMenu.Content>
+          </DropdownMenu.Portal>
+        </DropdownMenu.Root>
+        <DropdownMenu.Root>
+          <DropdownMenu.Trigger>
+            <span>Тимур И.</span>
+          </DropdownMenu.Trigger>
+          <DropdownMenu.Portal>
+            <DropdownMenu.Content sideOffset={5}>
+              <DropdownMenu.Item>Настройки</DropdownMenu.Item>
+              <DropdownMenu.Item>Выход</DropdownMenu.Item>
+            </DropdownMenu.Content>
+          </DropdownMenu.Portal>
+        </DropdownMenu.Root>
+      </DropdownsSection>
     </Navbar>
   );
 }
@@ -62,7 +52,7 @@ const Navbar = styled.nav`
   width: 100%;
   z-index: 1;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
 `;
 
@@ -108,12 +98,11 @@ const NavText = styled.span`
 `;
 
 const StyledLogo = styled(Logo)`
-width:222px;
-height: 35px;
-`
+  width: 222px;
+  height: 35px;
+`;
 
 const DropdownsSection = styled.div`
-display: flex;
-padding-bottom: 10px;
-`
-
+  display: flex;
+  padding-bottom: 10px;
+`;

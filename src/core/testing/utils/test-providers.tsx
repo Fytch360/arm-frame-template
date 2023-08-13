@@ -1,8 +1,9 @@
-import { theme } from "../../theme";
 import "@testing-library/jest-dom";
 import { render, RenderOptions } from "@testing-library/react";
 import { ReactElement, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
+
+import { theme } from "../../theme";
 
 interface TestProvidersProps {
   children: ReactNode;
@@ -21,5 +22,7 @@ const customRender = (
   options?: Omit<RenderOptions, "wrapper">
 ) => render(ui, { wrapper: TestProviders, ...options });
 
+// eslint-disable-next-line import/export
 export * from "@testing-library/react";
+// eslint-disable-next-line import/export
 export { customRender as render };
